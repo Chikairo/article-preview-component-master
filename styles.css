@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Manrope:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(110vh - 1px);
+    background-color: var(--light-grayish-blue);
+    font-family: 'Manrope';
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.box {
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    border-radius: 0.8rem;
+    width: 350px;
+    max-height: 100%;
+}
+
+header {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--very-dark-grayish-blue);
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 0;
+    color: var(--grayish-blue);
+    line-height: 1.25rem;
+    letter-spacing: 0.05rem;
+}
+
+.author {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    justify-items: space-between;
+    gap: 5rem;
+}
+
+.author .image {
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    gap: 1rem;
+}
+
+.author .image img {
+    border-radius: 50%;
+    width: 2.5rem;
+}
+
+.text header, .text p {
+    font-size: 13px;
+    line-height: 0.3rem;
+}
+
+button {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 100%;
+    border: none;
+    cursor: pointer;
+}
+
+.share {
+    background-color: var(--very-dark-grayish-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0rem 2rem 0rem 2rem;
+    border-radius: 0px 0px 10px 10px;
+    width: 350px;
+    min-height: 80px;
+    color: var(--grayish-blue);
+    font-size: 12px;
+    letter-spacing: 0.25rem;
+}
+
+.share button:hover{
+    background-color: var(--white);
+}
+
+.shareSvg {
+    display: flex;
+    align-items: center;
+    justify-content: none;
+    gap: 1rem;
+}
+
+.shareSvg img {
+    border-radius: 0;
+}
+
+.slide-top {
+	-webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@-webkit-keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
+
+    100% {
+      -webkit-transform: translateY(100px);
+              transform: translateY(100px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+      -webkit-transform: translateY(50);
+              transform: translateY(50);
+    }
+
+    100% {
+      -webkit-transform: translateY(100%);
+              transform: translateY(-100%);
+    }
+}
+
+.slide-out-bottom {
+	-webkit-animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: slide-out-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes slide-out-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-bottom {
+    0% {
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(100%);
+      transform: translateY(100%);
+      opacity: 0;
+    }
+  }
+  
+.attribution {
+    font-size: 11px; 
+    text-align: center; 
+    margin-top: 3rem;
+}
+
+.attribution a {
+     color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 900px) {
+    .box {
+        grid-template-columns: 1fr 1fr;
+       min-width: 700px;
+    }
+
+    .box img {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    @media screen and (min-width: 800px) {
+        body {
+            padding: 0.5rem;
+            height: calc(100vh - 1px);
+        }
+
+        .box {
+            width: 40%;
+            height: 35%;
+            display: flex;
+            justify-content: left;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .items {
+            padding: 2rem 2rem 2rem 2rem;
+        }
+
+
+        img {
+            max-width: 40%;
+            height: 100%;
+        }
+
+        header {
+            font-size: 19px;
+        }
+
+        p {
+            font-size: 12px;
+            letter-spacing: 0.01rem;
+        }
+
+        .author {
+            margin-top: 1.5rem;
+            margin-bottom: 0;
+            gap: 9rem;
+        }
+
+        .share {
+            width: 12%;
+            min-height: 5%;
+            padding: 0rem 0rem 0rem 1rem;
+            border-radius: 1rem;
+            position: absolute;
+            right: 21rem;
+            bottom: 23rem;
+        }
+
+        .share p {
+            margin-left: 0;
+        }
+
+        .share img {
+            border-radius: 0%;
+        }
+
+        .share .share-button {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 1024px) {
+        .share {
+            width: 17%;
+            position: relative;
+            left: 18.5rem;
+            bottom: 5.25rem;
+        }
+    
+    @media screen and (min-width: 1440px) {
+        .share {
+            width: 12%;
+            position: relative;
+        }
+    }
+
+    @media screen and (min-width: 1500px) {
+        .share {
+            width: 9%;
+            position: relative;
+            left: 20rem;
+            bottom: 4.8rem;
+        }
+
+        .author {
+            gap: 11.5rem;
+        }
+
+        .box {
+            height: 30%
+        }
+}
